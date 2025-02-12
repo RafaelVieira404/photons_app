@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android_PhotonsApp</string>
+    <string name="light_selector">Select a light Source</string>
+    <string name="plant_selector">Select a Plant Source</string>
+    <string name="settings_selector">Settings</string>
+    <string name="camera_start">Start measurements</string>
+    <string name="information_about_camera">Posicione a camera no local onde a planta ficará</string>
+</resources>
