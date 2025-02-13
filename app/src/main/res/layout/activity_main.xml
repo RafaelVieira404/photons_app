@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CameraActivity">
 
 
     <RelativeLayout
@@ -117,7 +117,6 @@
         android:layout_height="80dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:background="@drawable/round_button_camera"
         android:backgroundTint="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"/>
@@ -142,7 +141,6 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:contentDescription="@string/plant_selector"
-        android:background="@drawable/baseline_compost_24"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
