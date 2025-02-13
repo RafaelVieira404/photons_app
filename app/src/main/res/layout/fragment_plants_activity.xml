@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/end_game_activity"
+    android:id="@+id/end_activity"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -49,6 +49,7 @@
         >
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_layout_plant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

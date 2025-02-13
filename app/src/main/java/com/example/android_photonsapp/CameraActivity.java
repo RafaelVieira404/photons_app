@@ -33,6 +33,14 @@
 //    @Override
 //    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
 //        super.onCreate(savedInstanceState, persistentState);
+//        setContentView(R.layout.camera_container);
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.camera_textureView), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
+//
+//        openCamera();
 //    }
 //
 //    CameraManager cameraManager;
@@ -71,9 +79,7 @@
 //        textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
 //            @Override
 //            public void onSurfaceTextureAvailable(@NonNull SurfaceTexture surface, int width, int height) {
-//                openBackgroundHandler();
-//                setupCamera();
-//                openCamera();
+//
 //            }
 //
 //            @Override
@@ -133,7 +139,7 @@
 //            for (String cameraId : cameraIds) {
 //                CameraCharacteristics cameraCharacteristics = cameraManager.getCameraCharacteristics(cameraId);
 //
-//                if (cameraCharacteristics.get(CameraCharacteristics.LENS_FACING) == android.hardware.camera2.CameraMetadata.LENS_FACING_FRONT) {
+//                if (cameraCharacteristics.get(CameraCharacteristics.LENS_FACING_FRONT) == android.hardware.camera2.CameraMetadata.LENS_FACING_FRONT) {
 //                    this.cameraId = cameraId;
 //                    StreamConfigurationMap streamConfigurationMap = cameraCharacteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
 //                    size = streamConfigurationMap.getOutputSizes(SurfaceTexture.class)[0];
@@ -148,6 +154,7 @@
 //
 //    private void createCaptureSession() {
 //        SurfaceTexture surfaceTexture = textureView.getSurfaceTexture();
+//        assert surfaceTexture != null;
 //        surfaceTexture.setDefaultBufferSize(size.getWidth(), size.getHeight());
 //        Surface surface = new Surface(surfaceTexture);
 //
