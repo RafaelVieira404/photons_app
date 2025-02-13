@@ -17,45 +17,52 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-    class PlantsAdapter extends RecyclerView.Adapter<PlantsAdapter.PlantsAdapterViewHolder>{
+    class PlantsAdapter extends RecyclerView.Adapter<PlantsAdapter.PlantsAdapterViewHolder> {
 
-    private final ArrayList<PlantDataBaseFormat> plantDataArrayList;
+        private final ArrayList<PlantDataBaseFormat> plantDataArrayList;
 
-    public PlantsAdapter(ArrayList<PlantDataBaseFormat> plantArray) {
-        this.plantDataArrayList = plantArray;
-    }
+        public PlantsAdapter(ArrayList<PlantDataBaseFormat> plantArray) {
+            this.plantDataArrayList = plantArray;
+        }
 
-    @NonNull
-    @Override
-    public PlantsAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.fragment_plants_activity, parent, false);
-        return new PlantsAdapterViewHolder(view);
-    }
+        @NonNull
+        @Override
+        public PlantsAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(
+                    R.layout.fragment_plants_activity, parent, false);
+            return new PlantsAdapterViewHolder(view);
+        }
 
-    @Override
-    public void onBindViewHolder(@NonNull PlantsAdapter holder, int position) {
-        PlantDataBaseFormat plants  = plantDataArrayList.get(position);
-        holder.bind(plants);
-    }
+        @Override
+        public void onBindViewHolder(@NonNull PlantsAdapterViewHolder holder, int position) {
+            PlantDataBaseFormat plants = plantDataArrayList.get(position);
+            holder.bind(plants);
+        }
 
-    @Override
-    public int getItemCount() {
-       return plantDataArrayList.size();
-    }
+        @Override
+        public int getItemCount() {
+            return plantDataArrayList.size();
+        }
 
         class PlantsAdapterViewHolder extends RecyclerView.ViewHolder {
-
+            TextView txt_1;
+            TextView txt_2;
+            TextView txt_3;
 
             public PlantsAdapterViewHolder(@NonNull View itemView) {
                 super(itemView);
+                txt_1 = itemView.findViewById(R.id.plant_name);
+                txt_2 = itemView.findViewById(R.id.text_1);
+                txt_3 = itemView.findViewById(R.id.ideal_photon);
+
+            }
+
+
+            public void bind(PlantDataBaseFormat question) {
+                txt_1.setText(question.getText());
+                txt_2.setText(question.getA());
+                txt_3.setText(question.getB());
 
             }
         }
-
-        public void bind(PlantDataBaseFormat question) {
-            question_answer1.setText(question.getA());
-            question_answer2.setText(question.getB());
-            question_answer3.setText(question.getC());
-            question_answer4.setText(question.getD());
-        }
+    }

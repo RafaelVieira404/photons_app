@@ -33,7 +33,7 @@
 
 
         <TextView
-            android:id="@+id/question_endGame"
+            android:id="@+id/plant_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -46,10 +46,10 @@
             />
 
         <TextView
-            android:id="@+id/question_answer1"
+            android:id="@+id/text_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/question_endGame"
+            android:layout_below="@+id/plant_name"
             android:layout_alignStart="@+id/image_contributor"
             android:ellipsize="marquee"
             android:paddingStart="8dp"
@@ -60,10 +60,10 @@
             tools:text="teste" />
 
         <TextView
-            android:id="@+id/user_answer"
+            android:id="@+id/ideal_photon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/question_answer1"
+            android:layout_below="@+id/text_1"
             android:layout_alignStart="@+id/image_contributor"
             android:layout_marginTop="4dp"
             android:ellipsize="marquee"
