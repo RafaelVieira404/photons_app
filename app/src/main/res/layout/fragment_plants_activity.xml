@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/end_activity"
+    android:background="@color/cardview_shadow_end_color"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <Toolbar
+        android:id="@+id/image_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
         android:background="@drawable/rectangle_round_corners"
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="@color/white"
+        >
+    </Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/image_app"
+        android:paddingHorizontal="8dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@id/image_app"
+        android:layout_marginHorizontal="15dp"
+        android:text="MENU DE PLANTAS"
         >
 
-        <ImageView
-            android:id="@+id/correct_answers_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            tools:text="PlantDatabase"
-            tools:textSize="70sp"/>
+    </TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/correct_answers_result"
-            >
-
-        </TextView>
-
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/recycler_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:padding="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rectangle_round_corners"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="4dp"
-        android:layout_weight="3"
+        android:layout_below="@+id/image_app"
+
         >
 
         <androidx.recyclerview.widget.RecyclerView
@@ -62,18 +63,18 @@
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/float_button_endGame"
+
+            android:id="@+id/float_return_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@id/recycler_layout_plant"
             android:contentDescription="TODO"
             android:src="@drawable/baseline_restart_alt_24"
             android:backgroundTint="@color/white"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
             />
-
 
     </RelativeLayout>
 
@@ -82,4 +83,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>

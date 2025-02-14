@@ -38,5 +38,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        plantsData.setOnClickListener(v -> {
+           Intent intent = new Intent(this, PlantActivity.class);
+            startActivity(intent);
+        });
+
     }
 }

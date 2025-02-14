@@ -1,83 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/fragment_plants_activity"
-    >
-
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_round_corners"
+    android:layout_marginBottom="10dp"
+    android:backgroundTint="#f9f8dd"
+    android:padding="5dp"
+    tools:showIn="@layout/fragment_plants_activity">
 
     <RelativeLayout
         android:id="@+id/question_format_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/rectangle_round_corners"
+        android:background="@android:color/transparent">
 
-        >
-
-        <ImageButton
-
-            android:id="@+id/image_contributor"
+        <ImageView
+            android:id="@+id/contributor_image_view"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/round_button"
-            tools:text="aaaaa"
+            android:padding="4dp"
+            android:src="@drawable/girassol_vaso"/>
+
+            <TextView
+                android:id="@+id/plant_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/contributor_image_view"
+                android:textSize="25sp"
+                tools:text="Em the bigBangTheory!" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contributor_image_view"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:contentDescription="null"
+
             >
 
-        </ImageButton>
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="teste" />
 
+            <TextView
+                android:id="@+id/ideal_photon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_1"
+                android:ellipsize="marquee"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:text="questao asdasdad" />
 
-        <TextView
-            android:id="@+id/plant_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:layout_toEndOf="@+id/image_contributor"
-            tools:text="Em the bigBangTheory qual o nome do personagem que diz Bazinga!"
+        </RelativeLayout>
 
-            />
-
-        <TextView
-            android:id="@+id/text_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/plant_name"
-            android:layout_alignStart="@+id/image_contributor"
-            android:ellipsize="marquee"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:background="@drawable/rectangle_round_corners"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            tools:text="teste" />
-
-        <TextView
-            android:id="@+id/ideal_photon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_1"
-            android:layout_alignStart="@+id/image_contributor"
-            android:layout_marginTop="4dp"
-            android:ellipsize="marquee"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rectangle_round_corners"
-            android:textSize="20sp"
-            tools:text="questao asdasdad"
-
-            />
     </RelativeLayout>
-
-
-
 
 </RelativeLayout>

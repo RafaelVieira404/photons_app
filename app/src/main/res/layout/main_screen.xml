@@ -16,7 +16,20 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="6dp"
         android:background="@drawable/rectangle_round_corners"
-        android:backgroundTint="@color/black" />
+        android:backgroundTint="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="SENSOR APP SENAI"
+        android:textSize="80sp"
+        android:textColor="@color/black"
+        >
+
+    </TextView>
 
     <Button
         android:id="@+id/left_bottom_button_main"
@@ -27,7 +40,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/qr_code_24px"
         tools:ignore="DuplicateSpeakableTextCheck">
 
     </Button>
@@ -37,7 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/yard_24px"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -56,6 +69,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_alignParentEnd="true"
+        android:text="START MEASUREMENT"
         >
     </Button>
 

@@ -1,17 +1,14 @@
 package com.example.android_photonsapp;
 
-import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import androidx.annotation.RequiresApi;
-
 public class PlantDataBaseFormat implements Parcelable {
-    private final String Text;
-    private final String a;
-    private final String b;
-    private final String c;
-    private final String d;
+    private String Text;
+    private String a;
+    private String b;
+    private String c;
+    private String d;
 
     public PlantDataBaseFormat(String Text, String a, String b, String c, String d) {
         this.Text = Text;
@@ -21,7 +18,6 @@ public class PlantDataBaseFormat implements Parcelable {
         this.d = d;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.Q)
     protected PlantDataBaseFormat(Parcel in) {
         Text = in.readString();
         a = in.readString();
@@ -59,7 +55,6 @@ public class PlantDataBaseFormat implements Parcelable {
         return d;
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -68,15 +63,7 @@ public class PlantDataBaseFormat implements Parcelable {
     public static final Creator<PlantDataBaseFormat> CREATOR = new Creator<PlantDataBaseFormat>() {
         @Override
         public PlantDataBaseFormat createFromParcel(Parcel in) {
-            final PlantDataBaseFormat q = new PlantDataBaseFormat(
-                    in.readString(),
-                    in.readString(),
-                    in.readString(),
-                    in.readString(),
-                    in.readString()
-            );
-
-            return q;
+            return new PlantDataBaseFormat(in);
         }
 
         @Override
